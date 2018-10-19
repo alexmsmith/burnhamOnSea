@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="dist/base.css">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script>
+			var on = false;
+			function set() {
+				var y = document.getElementById("enter");
+				var z = document.getElementById("search");
+				y.style.outline = "none";
+				y.style.visibility = "hidden";
+				z.style.visibility = "hidden";
+			}
+			function change() {
+				var x = document.getElementById("search-box");
+				var y = document.getElementById("enter");
+				var z = document.getElementById("search");
+				if(on==false) {
+					x.style.width = "200px";
+					y.style.outline = "none";
+					y.placeholder = "Start typing...";
+					y.style.visibility = "visible";
+					z.style.background = "rgba(255,0,0,.6)";
+					z.style.borderRadius = "40px";
+					z.style.padding = "10px";
+					z.style.float = "right";
+					z.style.visibility = "visible";
+					on = true;
+				}
+				else {
+					x.style.width = "20px";
+					y.placeholder = "";
+					y.style.visibility = "hidden";
+					z.style.transitionDuration = "0.6s";
+					z.style.visibility = "hidden";
+					z.style.background = "transparent";
+					on = false;
+				}
+			}
+			function find() {
+				alert("Found!");
+			}
+		</script>
+	</head>
+	<body onload="set()">
+		<!--
+		<audio autoplay loop>
+			<source src="peace.mp3" type="audio/mpeg">
+		</audio>
+	-->
+		<header id="top">
+			<div id="logo">
+				<a href="#"><img src="lighthouse.jpg" /></a>
+				<h1>Burnham-On-Sea<span id="com">.com</span></h1><br /><br />
+				<p>South West Website of the Year<p>
+			</div>
+			<div class="container">
+				<div id="search-box">
+					<input id="enter" type="text">
+					<div id="search" onclick="find()">
+						<i class="fa fa-search searchIcon"></i>
+					</div>
+				</div>
+				<div id="switch" onclick="change()"></div>
+			</div>
+		</header>
+		<nav>
+			<ul id="menuLeft">
+				<li><a href="#news">News</a></li>
+				<li><a href="#tourism">Tourism</a></li>
+				<li><a href="#">Forums</a></li>
+				<li><a href="#">Community</a></li>
+			</ul>
+			<ul id="menuRight">
+				<li><a href="#">Business Guide</a></li>
+				<li><a href="#">Contact Us</a></li>
+				<li><a href="#">Webcam</a></li>
+				<li><a href="#">Video</a></li>
+			</ul>
+		</nav>
+		<div class="carousel-wrapper">
+			<span id="item-1"></span>
+			<span id="item-2"></span>
+			<span id="item-3"></span>
+			<div class="carousel-item item-1">
+				<h2>Welcome to Burnham-On-Sea's Website</h2>
+				<p>Burnham-On-Sea.</span>com is the biggest, most up-to-date Website for Burnham-On-Sea, Somerset, UK.<br /> 
+					Written by residents, it provides community news, events and tourist information. 
+					<br /><a href="#">Bookmark Us</a> and <a href="#">Make Us Your Start Page</a>.</span>
+				</p>
+				<a class="arrow arrow-prev" href="#item-3"></a>
+				<a class="arrow arrow-next" href="#item-2"></a>
+			</div>
+						
+			<div class="carousel-item item-2">
+				<h2>Relaxing Location Full of Wonderful Treasures</h2>
+				<p>Burnham-On-Sea.</span>com is the biggest, most up-to-date Website for Burnham-On-Sea, Somerset, UK.<br /> 
+					Written by residents, it provides community news, events and tourist information. 
+					<br /><a href="#">Bookmark Us</a> and <a href="#">Make Us Your Start Page</a>.</span>
+				</p>
+				<a class="arrow arrow-prev" href="#item-1"></a>
+				<a class="arrow arrow-next" href="#item-3"></a>
+			</div>
+						
+			<div class="carousel-item item-3">
+				<h2>A Strong Community That Supports One Another</h2>
+				<p>Burnham-On-Sea.</span>com is the biggest, most up-to-date Website for Burnham-On-Sea, Somerset, UK.<br /> 
+					Written by residents, it provides community news, events and tourist information. 
+					<br /><a href="#">Bookmark Us</a> and <a href="#">Make Us Your Start Page</a>.</span>
+				</p>
+				<a class="arrow arrow-prev" href="#item-2"></a>
+				<a class="arrow arrow-next" href="#item-1"></a>
+			</div>
+		</div>
+		<!--<div id="locationView"></div>-->
+		<news-section id="news">
+			<h2 id="sub-title">News</h2>
+			<p>
+				Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+			</p>
+			<p>
+				Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+			</p>
+			<span id="top-link"><a href="#top">Go Top</a></span>
+		</news-section>
+		<tourism-section id="tourism">
+			<h2 id="sub-title">Tourism</h2>
+			<p>
+				Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+			</p>
+			<p>
+				Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+			</p>
+			<span id="top-link"><a href="#top">Go Top</a></span>
+		</tourism-section>
+		<div id="footer">
+			<div id="footerMenu">
+				<p>Other Links</p>
+				<ul id="footerMenuLeft">
+					<li><a href="#">Home</a></li>
+					<li><a href="#">News</a></li>
+					<li><a href="#">Forumns</a></li>
+					<li><a href="#">Community</a></li>
+				</ul>
+				<ul id="footerMenuRight">
+					<li><a href="#">Video</a></li>
+					<li><a href="#">Webcam</a></li>
+					<li><a href="#">Contact Us</a></li>
+					<li><a href="#">Business Guide</a></li>
+				</ul>
+			</div>
+			<div id="footerAddress">
+				<ul>
+					<li>40 MadeUpVille,</li>
+					<li>Hockypokey Land,</li>
+					<li>The Red Planet,</li>
+					<li>The Observable Universe.</li>
+				</ul>
+				<div id="socialMedia">
+					<ul>
+						<a href="#"><li id="fb">F</li></a>
+						<a href="#"><li id="tw">T</li></a>
+						<a href="#"><li id="yt">Y</li></a>
+					</ul>
+				</div>
+			</div>
+			<div id="footerBottom">
+				<p id="copyright">Copyright 2018 <a href="#">Burnham-On-Sea.com</a></p>
+				<p id="policyLinks"><a href="#">Privacy Policy</a> | <a href="#">Cookies Policy</a> | <a href="#">Terms & Conditions</a></p>
+			</div>
+		</div>
+	</body>
+</html>
